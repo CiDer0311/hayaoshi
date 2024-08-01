@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クイズゲーム</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <button id="homeButton" class="home-button">ホーム</button>
+    <div id="startScreen" class="screen">
+        <h1>クイズゲーム</h1>
+        <button id="startButton">スタート</button>
+    </div>
+
+    <div id="quizScreen" class="screen hidden">
+        <div class="question-frame">
+            <img src="frame.jpg" alt="Question Frame">
+            <p id="question">ここにクイズの質問が表示されます。</p>
+        </div>
+        <div class="button-container">
+            <img src="button.jpg" alt="Buzz Button" id="buzzButton">
+            <div id="countdown" class="hidden">5</div>
+        </div>
+        <div id="judgeButtons" class="hidden">
+            <button id="correctButton">正解</button>
+            <button id="incorrectButton">不正解</button>
+        </div>
+        <div id="actionButtons" class="hidden">
+            <button id="showAnswerButton">答え表示</button>
+            <button id="showFullQuestionButton">全文表示</button>
+            <button id="nextQuestionButton">次の問題へ</button>
+            <button id="resultButton" class="hidden">結果へ</button>
+        </div>
+        
+    </div>
+
+    <div id="resultScreen" class="screen hidden">
+        <div id="result">
+            <p>正解数: <span id="correctNum"></span></p>
+        </div>
+        <button id="endButton">終了</button>
+    </div>    
+
+    <script src="script.js"></script>
+</body>
+</html>
